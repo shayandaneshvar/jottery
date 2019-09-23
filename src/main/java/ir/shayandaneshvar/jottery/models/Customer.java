@@ -9,17 +9,19 @@ import javax.validation.constraints.Size;
 import java.time.LocalDate;
 import java.util.List;
 
-@Data
 @Entity
-@EqualsAndHashCode(exclude = {"level","prizes"})
-@NoArgsConstructor
+@Getter
+@Setter
 @AllArgsConstructor
+@NoArgsConstructor
+@ToString(exclude = {"level","prize"})
+
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NonNull
-    @Column(unique = true)
+//    @Column(unique = true)
     @Basic(fetch = FetchType.EAGER)
     private Long nationalCode;
     @NonNull
@@ -42,8 +44,8 @@ public class Customer {
     private String mobile;
     @ManyToOne
     private Level level;
-    @OneToMany(mappedBy = "customer",cascade = CascadeType.ALL)
-    private List<Prize> prizes;
+    @OneToOne/*(mappedBy = "customer",cascade = CascadeType.ALL)*/
+    private Prize prize;
 
     public Customer(Long nationalCode, String firstName, String lastName,
                     Integer score, LocalDate birthDate, Gender gender,

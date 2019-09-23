@@ -45,6 +45,7 @@
                 <th>National Code</th>
                 <th>Score</th>
                 <th>Level</th>
+                <th>Prize</th>
             </tr>
             </thead>
 
@@ -58,6 +59,8 @@
                 <td th:text="${customer.score}"></td>
                 <td th:if="${customer.level}"><p th:text="${customer.level.tag}"></p></td>
                 <td th:if="!${customer.level}">-</td>
+                <td th:if="${customer.prize}"><p th:text="${customer.prize.name}"></p></td>
+                <td th:if="!${customer.prize}">-</td>
             </tr>
         </table>
     </div>

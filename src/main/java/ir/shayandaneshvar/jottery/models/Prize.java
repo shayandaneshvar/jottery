@@ -15,6 +15,6 @@ public class Prize {
     private String name;
     private Integer max;
     private Integer number;
-    @ManyToOne
-    private Customer customer;
+//    @ManyToOne
+//    private Customer customer;
 }

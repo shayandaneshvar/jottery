@@ -19,8 +19,8 @@
 </head>
 <body class="text-center">
 <h1>Jottery</h1>
-<div class="card ">
-    <div class="card-header bg-info text-white">
+<div class="card col-md-8" style="margin: 0px auto">
+    <div class="card-header bg-info text-white col-md-12 text-center" style="/*margin: 0px auto;*/width: 120%">
         <h3>Shortcuts</h3>
     </div>
     <div class="card-body">
@@ -28,15 +28,8 @@
         <a href="#"  th:href="@{/prizes}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Prizes</a>
         <a href="#"  th:href="@{/customers}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Customers</a>
         <a href="#"  th:href="@{/lottery}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Lottery</a>
+        <a href="#"  th:href="@{/results}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Results</a>
     </div>
 </div>
-<!--<form class="form-inline">-->
-<!--<h4 class="card-title">Special title treatment</h4>-->
-<!--<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
-<!--</form>-->
-<!--<form action="#" th:action="@{/form}" th:object="${customer}" method="post">-->
-<!--    <input type="text" th:field="*{id}">-->
-<!--    <input type="submit">-->
-<!--</form>-->
 </body>
 </html>

@@ -16,6 +16,7 @@ public class PrizeCommandToPrize implements Converter<PrizeCommand, Prize> {
         prize.setId(src.getId());
         prize.setMax(src.getLevel().getMaximum());
         prize.setName(src.getName());
+        prize.setNumber(src.getNumber());
         return prize;
     }
 }

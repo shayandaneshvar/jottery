@@ -14,4 +14,5 @@ public class PrizeCommand {
     private Long id;
     private String name;
     private Level level;
+    private Integer number;
 }

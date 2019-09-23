@@ -11,7 +11,7 @@ import java.util.List;
 
 @Data
 @Entity
-@EqualsAndHashCode(exclude = {"level"})
+@EqualsAndHashCode(exclude = {"level","prizes"})
 @NoArgsConstructor
 @AllArgsConstructor
 public class Customer {

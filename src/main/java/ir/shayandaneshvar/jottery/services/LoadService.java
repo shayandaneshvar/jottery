@@ -31,9 +31,12 @@ public class LoadService {
     @Value("${csv_path}")
     private String csv_path;
 
-    @PostConstruct
     @SneakyThrows
+    @PostConstruct
     public void init() {
+        if (customerRepository.count() != 0) {
+            return;
+        }
         if (clear_data) {
             customerRepository.deleteAll();
         }

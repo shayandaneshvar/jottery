@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -15,28 +14,20 @@
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../static/styles.css" th:href="@{~/styles.css}">
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>Lottery</title>
 </head>
 <body class="text-center">
-<h1>Jottery</h1>
-<div class="card ">
-    <div class="card-header bg-info text-white">
-        <h3>Shortcuts</h3>
+<h1>Lottery</h1>
+<form class="form-inline" action="#" th:action="@{/doTheLottery}" th:object="${lottery}" method="post">
+    <label class="sr-only" for="inlineFormInputGroupOffset">Offset</label>
+    <div class="input-group mb-2 mr-sm-2">
+        <div class="input-group-prepend">
+            <div class="input-group-text">Offset</div>
+        </div>
+        <input type="number" class="form-control" id="inlineFormInputGroupOffset" th:field="*{offset}"
+               placeholder="Integer">
     </div>
-    <div class="card-body">
-        <a href="#"  th:href="@{/levels}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Levels</a>
-        <a href="#"  th:href="@{/prizes}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Prizes</a>
-        <a href="#"  th:href="@{/customers}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Customers</a>
-        <a href="#"  th:href="@{/lottery}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Lottery</a>
-    </div>
-</div>
-<!--<form class="form-inline">-->
-<!--<h4 class="card-title">Special title treatment</h4>-->
-<!--<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
-<!--</form>-->
-<!--<form action="#" th:action="@{/form}" th:object="${customer}" method="post">-->
-<!--    <input type="text" th:field="*{id}">-->
-<!--    <input type="submit">-->
-<!--</form>-->
+    <button type="submit" class="btn btn-primary mb-2">Start</button>
+</form>
 </body>
 </html>

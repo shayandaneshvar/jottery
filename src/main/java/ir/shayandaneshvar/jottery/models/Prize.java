@@ -1,14 +1,12 @@
 package ir.shayandaneshvar.jottery.models;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
 @NoArgsConstructor
-@Getter
-@Setter
+@Data
+@EqualsAndHashCode(exclude = "customer")
 @Entity
 public class Prize {
     @Id
@@ -16,6 +14,7 @@ public class Prize {
     private Long id;
     private String name;
     private Integer max;
+    private Integer number;
     @ManyToOne
     private Customer customer;
 }

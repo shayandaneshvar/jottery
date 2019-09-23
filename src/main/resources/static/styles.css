@@ -1,3 +1,25 @@
-a {
-    margin: 8px;
+/*a {*/
+/*    margin: 8px;*/
+/*}*/
+
+#next-page {
+    margin: 4px;
+    transform: scaleX(0.5) scaleY(0.5);
+}
+
+#previous-page {
+    margin: 4px;
+    transform: rotate(180deg) scaleX(0.5) scaleY(0.5);
+}
+
+#next-page:hover {
+    filter: drop-shadow(8px 8px 10px gray) invert(80%);
+}
+
+#previous-page:hover {
+    filter: drop-shadow(8px -8px 10px gray) invert(80%);
+}
+
+form {
+    display: inline-flex !important;
 }

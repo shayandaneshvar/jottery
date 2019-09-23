@@ -22,6 +22,7 @@ public class PrizeToPrizeCommand implements Converter<Prize, PrizeCommand> {
         prizeCommand.setId(src.getId());
         prizeCommand.setName(src.getName());
         prizeCommand.setLevel(levelRepository.findByMaximum(src.getMax()));
+        prizeCommand.setNumber(src.getNumber());
         return prizeCommand;
     }
 }
